@@ -7,7 +7,7 @@
     "init": "node scripts/init.mjs",
     "build": "node scripts/build-extension.mjs",
     "brand": "node scripts/brand.mjs",
-    "login:codex": "/Applications/Codex.app/Contents/Resources/codex login",
+    "login:codex": "codex login",
     "login:cursor": "cursor-agent login",
     "start:bridge": "node bridge/server.js",
     "check": "node scripts/build-extension.mjs && node --check bridge/server.js && node --check extension/background.js && node --check extension/content.js && node --check extension/options.js"
