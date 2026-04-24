@@ -1,9 +1,9 @@
 # Local CLI Extension
 
-中文优先的可共享 Chrome MV3 侧边栏项目。  
+Chrome MV3 侧边栏项目。  
 聊天可接 `codex-cli`、`cursor-cli`、`openai-compatible`，翻译可接 `ollama`、`openai-compatible`，并且品牌、模型、服务地址都能自己改。
 
-English readers: a compact English section is included at the end.
+A compact English section is included at the end.
 
 ## 亮点
 
@@ -11,7 +11,6 @@ English readers: a compact English section is included at the end.
 - 聊天与翻译解耦：可以分别选择不同 provider
 - 交互完整：悬浮球、侧边栏、停止按钮、右键菜单、网页翻译、模型选择
 - 易于 fork：支持改名、换图标、换默认 provider、换模型地址
-- 面向中文用户：中文文档优先，同时保留英文说明
 
 ## 支持的 Provider
 
@@ -19,7 +18,6 @@ English readers: a compact English section is included at the end.
 
 - `codex-cli`
 - `cursor-cli`
-- `openai-compatible`
 
 ### 翻译
 
@@ -97,19 +95,6 @@ English readers: a compact English section is included at the end.
   npm run build
   ```
 
-## 适合公开仓库吗
-
-适合。这一版已经尽量把“只适合作者本机”的内容清掉了：
-
-- 不在 README 里暴露本地绝对路径
-- 不提交本地 token、环境文件和机器噪音
-- 包含 `.gitignore` 和 `MIT` 许可证
-
-仍然要注意：
-
-- bridge 运行时打印的 token 只会出现在你的本机终端，不会自动进入仓库
-- 如果你自己额外建了 `config/*.local.json` 或 `.env.local`，不要手动提交
-
 ## 开发检查
 
 ```bash
@@ -120,13 +105,12 @@ npm run check
 
 ## English
 
-`local-cli-extension` is a shareable Chrome MV3 sidebar project with configurable chat and translation providers.
+`local-cli-extension` is a Chrome MV3 sidebar project with configurable chat and translation providers.
 
 ### Supported chat providers
 
 - `codex-cli`
 - `cursor-cli`
-- `openai-compatible`
 
 ### Supported translation providers
 
