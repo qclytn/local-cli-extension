@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Local CLI Extension Options</title>
+    <link rel="stylesheet" href="options.css">
+  </head>
+  <body>
+    <main>
+      <h1 id="optionsTitle">Local CLI Extension</h1>
+
+      <section class="section">
+        <h2>Branding</h2>
+        <div class="grid two">
+          <label>
+            Sidebar title
+            <input id="sidebarTitle" autocomplete="off" spellcheck="false">
+          </label>
+          <label>
+            Bubble emoji
+            <input id="bubbleIcon" autocomplete="off" spellcheck="false">
+          </label>
+        </div>
+        <label>
+          Welcome message
+          <input id="welcomeMessage" autocomplete="off" spellcheck="false">
+        </label>
+        <label>
+          Bridge label
+          <input id="bridgeLabel" autocomplete="off" spellcheck="false">
+        </label>
+      </section>
+
+      <section class="section">
+        <h2>Bridge</h2>
+        <div class="grid two">
+          <label>
+            Bridge URL
+            <input id="bridgeUrl" autocomplete="off" spellcheck="false">
+          </label>
+          <label>
+            Bridge token
+            <input id="bridgeToken" type="password" autocomplete="off" spellcheck="false">
+          </label>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Chat</h2>
+        <div class="grid two">
+          <label>
+            Chat provider
+            <select id="chatProvider">
+              <option value="codex-cli">codex-cli</option>
+              <option value="openai-compatible">openai-compatible</option>
+              <option value="cursor-cli">cursor-cli (reserved)</option>
+            </select>
+          </label>
+          <label>
+            Chat model override
+            <input id="chatModel" autocomplete="off" spellcheck="false" placeholder="Optional">
+          </label>
+        </div>
+        <div class="grid two">
+          <label>
+            Reasoning effort
+            <input id="reasoningEffort" autocomplete="off" spellcheck="false" placeholder="Optional">
+          </label>
+          <label class="checkbox-row">
+            <span>Remember chat history</span>
+            <input id="rememberHistory" type="checkbox">
+          </label>
+        </div>
+        <label>
+          System prompt
+          <textarea id="systemPrompt" rows="4"></textarea>
+        </label>
+      </section>
+
+      <section class="section">
+        <h2>Translation</h2>
+        <div class="grid two">
+          <label>
+            Translation provider
+            <select id="translationProvider">
+              <option value="ollama">ollama</option>
+              <option value="openai-compatible">openai-compatible</option>
+            </select>
+          </label>
+          <label>
+            Target language
+            <input id="targetLanguage" autocomplete="off" spellcheck="false">
+          </label>
+        </div>
+        <div class="grid two">
+          <label>
+            Visible paragraph limit
+            <input id="visibleSegmentLimit" type="number" min="1">
+          </label>
+          <label>
+            Batch size
+            <input id="batchSize" type="number" min="1">
+          </label>
+        </div>
+      </section>
+
+      <section class="section provider-group" data-chat-provider="codex-cli">
+        <h2>Codex CLI</h2>
+        <div class="grid two">
+          <label>
+            Codex binary
+            <input id="codexBin" autocomplete="off" spellcheck="false" placeholder="Optional">
+          </label>
+          <label>
+            Work directory
+            <input id="codexWorkDir" autocomplete="off" spellcheck="false" placeholder="Optional">
+          </label>
+        </div>
+        <div class="grid two">
+          <label>
+            Timeout (ms)
+            <input id="codexTimeoutMs" type="number" min="1000">
+          </label>
+          <label>
+            Models cache file
+            <input id="codexModelsCacheFile" autocomplete="off" spellcheck="false" placeholder="Optional">
+          </label>
+        </div>
+      </section>
+
+      <section class="section provider-group" data-chat-provider="cursor-cli">
+        <h2>Cursor CLI</h2>
+        <p class="hint">Install Cursor CLI on this machine, then run <code>cursor-agent login</code>. The bridge will call the local CLI instead of handling Cursor OAuth itself.</p>
+        <div class="grid two">
+          <label>
+            Cursor binary
+            <input id="cursorBin" autocomplete="off" spellcheck="false">
+          </label>
+          <label>
+            Cursor base URL
+            <input id="cursorBaseUrl" autocomplete="off" spellcheck="false" placeholder="Optional">
+          </label>
+        </div>
+        <label>
+          Cursor API key
+          <input id="cursorApiKey" type="password" autocomplete="off" spellcheck="false" placeholder="Optional">
+        </label>
+      </section>
+
+      <section class="section provider-group" data-translation-provider="ollama">
+        <h2>Ollama</h2>
+        <div class="grid two">
+          <label>
+            Ollama base URL
+            <input id="ollamaBaseUrl" autocomplete="off" spellcheck="false">
+          </label>
+          <label>
+            Ollama model
+            <input id="ollamaModel" autocomplete="off" spellcheck="false">
+          </label>
+        </div>
+        <div class="grid two">
+          <label>
+            Ollama API key
+            <input id="ollamaApiKey" type="password" autocomplete="off" spellcheck="false" placeholder="Optional">
+          </label>
+          <div class="stack">
+            <label class="checkbox-row">
+              <span>Disable think / reasoning</span>
+              <input id="ollamaThink" type="checkbox">
+            </label>
+            <label class="checkbox-row">
+              <span>Stream translation</span>
+              <input id="ollamaStream" type="checkbox">
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <section class="section provider-group" data-chat-provider="openai-compatible" data-translation-provider="openai-compatible">
+        <h2>OpenAI-compatible</h2>
+        <div class="grid two">
+          <label>
+            Base URL
+            <input id="openaiBaseUrl" autocomplete="off" spellcheck="false" placeholder="https://example.com/v1">
+          </label>
+          <label>
+            API key
+            <input id="openaiApiKey" type="password" autocomplete="off" spellcheck="false">
+          </label>
+        </div>
+        <div class="grid two">
+          <label>
+            Chat model
+            <input id="openaiChatModel" autocomplete="off" spellcheck="false" placeholder="Optional">
+          </label>
+          <label>
+            Translation model
+            <input id="openaiTranslationModel" autocomplete="off" spellcheck="false" placeholder="Optional">
+          </label>
+        </div>
+        <div class="grid two">
+          <label>
+            Models path
+            <input id="openaiModelsPath" autocomplete="off" spellcheck="false">
+          </label>
+          <label>
+            Chat completions path
+            <input id="openaiChatCompletionsPath" autocomplete="off" spellcheck="false">
+          </label>
+        </div>
+      </section>
+
+      <div class="actions">
+        <button id="save">Save</button>
+        <button id="test" type="button">Test bridge</button>
+      </div>
+      <p id="status" role="status"></p>
+    </main>
+    <script src="generated-config.js"></script>
+    <script src="options.js"></script>
+  </body>
+</html>

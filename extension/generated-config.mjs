@@ -1,0 +1,69 @@
+const config = {
+  "build": {
+    "extensionName": "Local CLI Extension",
+    "manifestDescription": "A configurable hover sidebar that talks to a local bridge and pluggable model providers.",
+    "actionTitle": "Local CLI Extension",
+    "optionsTitle": "Local CLI Extension Options"
+  },
+  "runtimeDefaults": {
+    "branding": {
+      "sidebarTitle": "Local CLI Extension",
+      "bubbleIcon": "✨",
+      "welcomeMessage": "Ready when you are.",
+      "bridgeLabel": "local bridge"
+    },
+    "bridge": {
+      "url": "http://127.0.0.1:8765",
+      "token": ""
+    },
+    "chat": {
+      "provider": "codex-cli",
+      "model": "",
+      "systemPrompt": "You are a concise, helpful assistant inside a browser sidebar. Answer in the user's language unless asked otherwise.",
+      "reasoningEffort": "",
+      "rememberHistory": true
+    },
+    "translation": {
+      "provider": "ollama",
+      "targetLanguage": "简体中文",
+      "stream": true,
+      "visibleSegmentLimit": 8,
+      "batchSize": 4,
+      "preserveBilingual": true
+    },
+    "providers": {
+      "codex": {
+        "bin": "",
+        "workDir": "",
+        "timeoutMs": 180000,
+        "modelsCacheFile": ""
+      },
+      "cursor": {
+        "bin": "cursor-agent",
+        "baseUrl": "",
+        "apiKey": ""
+      },
+      "ollama": {
+        "baseUrl": "http://127.0.0.1:11434",
+        "apiKey": "",
+        "model": "qwen3.5:4b",
+        "think": false,
+        "stream": true
+      },
+      "openaiCompatible": {
+        "baseUrl": "",
+        "apiKey": "",
+        "chatModel": "",
+        "translationModel": "",
+        "modelsPath": "/models",
+        "chatCompletionsPath": "/chat/completions"
+      }
+    },
+    "ui": {
+      "defaultPinned": false,
+      "panelMinWidth": 300,
+      "panelMinHeight": 330
+    }
+  }
+};
+export default config;

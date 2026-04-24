@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "Local CLI Extension",
+  "description": "A configurable hover sidebar that talks to a local bridge and pluggable model providers.",
+  "version": "0.2.0",
+  "permissions": [
+    "contextMenus",
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1/*",
+    "http://localhost/*",
+    "https://*/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "generated-config.js",
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "commands": {
+    "toggle-sidebar": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+G",
+        "mac": "Command+Shift+G"
+      },
+      "description": "Toggle Local CLI Extension"
+    }
+  },
+  "action": {
+    "default_title": "Local CLI Extension"
+  }
+}
