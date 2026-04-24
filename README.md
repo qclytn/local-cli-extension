@@ -1,8 +1,8 @@
 # Local CLI Extension
 
-中文优先的可共享 Chrome MV3 侧边栏项目。它基于本地 bridge 工作，保留了你已经验证过的交互形态，同时把品牌、聊天 provider、翻译 provider、模型和服务地址都做成可配置。
+Chrome MV3 侧边栏项目。它基于本地 bridge 工作，保留了你已经验证过的交互形态，同时把品牌、聊天 provider、翻译 provider、模型和服务地址都做成可配置。
 
-English readers: a short English section is included below. The repository is now documented in Chinese first, with English retained for accessibility.
+A short English section is included below.
 
 ## 中文说明
 
@@ -54,7 +54,7 @@ English readers: a short English section is included below. The repository is no
 4. 打开 `chrome://extensions/`
    - 开启开发者模式
    - 选择“加载已解压的扩展程序”
-   - 载入 [extension/](/Users/mitsuki/LLM/privt_project/local-cli-extension/extension)
+   - 载入 [extension/](~/local-cli-extension/extension)
 
 5. 打开扩展设置页，填入 bridge 输出的 URL 和 token。
 
@@ -77,19 +77,18 @@ English readers: a short English section is included below. The repository is no
 
 ### 文档入口
 
-- Provider 说明：[docs/providers.md](/Users/mitsuki/LLM/privt_project/local-cli-extension/docs/providers.md)
-- 品牌定制：[docs/branding.md](/Users/mitsuki/LLM/privt_project/local-cli-extension/docs/branding.md)
-- GitHub 首页文案建议：[docs/github-homepage.md](/Users/mitsuki/LLM/privt_project/local-cli-extension/docs/github-homepage.md)
+- Provider 说明：[docs/providers.md](~/local-cli-extension/docs/providers.md)
+- 品牌定制：[docs/branding.md](~/local-cli-extension/docs/branding.md)
+- GitHub 首页文案建议：[docs/github-homepage.md](~/local-cli-extension/docs/github-homepage.md)
 
 ### 开源仓库友好项
 
-- 已包含 [.gitignore](/Users/mitsuki/LLM/privt_project/local-cli-extension/.gitignore)
-- 已包含 [MIT LICENSE](/Users/mitsuki/LLM/privt_project/local-cli-extension/LICENSE)
+- 已包含 [.gitignore](~/local-cli-extension/.gitignore)
+- 已包含 [MIT LICENSE](~/local-cli-extension/LICENSE)
 - 已支持品牌构建脚本：`npm run brand -- --name ... --sidebar-title ... --emoji ...`
 
 ### 备注
 
-- 老项目 [gpt_side_bar](/Users/mitsuki/LLM/privt_project/gpt_side_bar) 保持不动
 - 这个仓库是更适合分享和 fork 的通用版
 - `npm run check` 会重建生成文件并做语法检查
 
@@ -114,7 +113,7 @@ npm run init
 npm run start:bridge
 ```
 
-Then load [extension/](/Users/mitsuki/LLM/privt_project/local-cli-extension/extension) in `chrome://extensions` with Developer Mode enabled, and fill in the bridge URL and token from the bridge output.
+Then load [extension/](~/local-cli-extension/extension) in `chrome://extensions` with Developer Mode enabled, and fill in the bridge URL and token from the bridge output.
 
 ### Provider support
 
