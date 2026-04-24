@@ -1,7 +1,7 @@
 # Local CLI Extension
 
 Chrome MV3 侧边栏项目。  
-聊天可接 `codex-cli`、`cursor-cli`、`openai-compatible`，翻译可接 `ollama`、`openai-compatible`，并且品牌、模型、服务地址都能自己改。
+聊天可接 `codex-cli`、`cursor-cli`，翻译可接 `ollama`、`openai-compatible`，并且品牌、模型、服务地址都能自己改。
 
 A compact English section is included at the end.
 
