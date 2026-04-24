@@ -54,7 +54,7 @@ A short English section is included below.
 4. 打开 `chrome://extensions/`
    - 开启开发者模式
    - 选择“加载已解压的扩展程序”
-   - 载入 [extension/](~/local-cli-extension/extension)
+   - 载入仓库里的 `extension/` 目录
 
 5. 打开扩展设置页，填入 bridge 输出的 URL 和 token。
 
@@ -77,18 +77,18 @@ A short English section is included below.
 
 ### 文档入口
 
-- Provider 说明：[docs/providers.md](~/local-cli-extension/docs/providers.md)
-- 品牌定制：[docs/branding.md](~/local-cli-extension/docs/branding.md)
-- GitHub 首页文案建议：[docs/github-homepage.md](~/local-cli-extension/docs/github-homepage.md)
+- Provider 说明：`docs/providers.md`
+- 品牌定制：`docs/branding.md`
 
 ### 开源仓库友好项
 
-- 已包含 [.gitignore](~/local-cli-extension/.gitignore)
-- 已包含 [MIT LICENSE](~/local-cli-extension/LICENSE)
+- 已包含 `.gitignore`
+- 已包含 `MIT LICENSE`
 - 已支持品牌构建脚本：`npm run brand -- --name ... --sidebar-title ... --emoji ...`
 
 ### 备注
 
+- 老项目 `gpt_side_bar` 保持不动
 - 这个仓库是更适合分享和 fork 的通用版
 - `npm run check` 会重建生成文件并做语法检查
 
@@ -113,7 +113,7 @@ npm run init
 npm run start:bridge
 ```
 
-Then load [extension/](~/local-cli-extension/extension) in `chrome://extensions` with Developer Mode enabled, and fill in the bridge URL and token from the bridge output.
+Then load the `extension/` folder in `chrome://extensions` with Developer Mode enabled, and fill in the bridge URL and token from the bridge output.
 
 ### Provider support
 

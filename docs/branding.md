@@ -17,7 +17,7 @@
 
 ### 构建时品牌
 
-定义在 [config/defaults.json](/Users/mitsuki/LLM/privt_project/local-cli-extension/config/defaults.json)，通过 `npm run build` 写入最终扩展产物：
+定义在 `config/defaults.json`，通过 `npm run build` 写入最终扩展产物：
 
 - 扩展安装名
 - manifest 描述
@@ -50,7 +50,7 @@ Editable from the extension options page:
 
 ### Build-time branding
 
-Defined in [config/defaults.json](/Users/mitsuki/LLM/privt_project/local-cli-extension/config/defaults.json) and applied by `npm run build`:
+Defined in `config/defaults.json` and applied by `npm run build`:
 
 - extension install name
 - manifest description
